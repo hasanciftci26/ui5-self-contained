@@ -1,0 +1,29 @@
+specVersion: '4.0'
+metadata:
+  name: ui5.self.contained
+type: application
+framework:
+  name: SAPUI5
+  version: 1.136.7
+  libraries:
+    - name: sap.ui.core
+    - name: sap.m
+builder:
+  customTasks:
+    - name: ui5-tooling-transpile-task
+      afterTask: replaceVersion
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ui5:
+          path:
+          - /resources
+          - /test-resources
+          url: https://sapui5.hana.ondemand.com
+          version: 1.136.7
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression

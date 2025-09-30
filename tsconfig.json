@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "allowJs": false,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "rootDir": "./webapp",
+        "outDir": "./dist",
+        "sourceMap": false,
+        "inlineSourceMap": false,
+        "baseUrl": "./",
+        "paths": {
+            "ui5/self/contained/*": [
+                "./webapp/*"
+            ]
+        },
+        "types": [
+            "@sapui5/types"
+        ]
+    },
+    "include": [
+        "webapp"
+    ]
+}

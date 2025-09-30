@@ -1,0 +1,26 @@
+{
+    "name": "ui5-self-contained",
+    "version": "1.0.0",
+    "description": "UI5 Self Contained Test Application",
+    "scripts": {
+        "start": "ui5 serve --port 8080 -o index.html",
+        "build": "ui5 build self-contained --include-all-dependencies --clean-dest --config ui5-deploy.yaml --include-task=generateCachebusterInfo"
+    },
+    "keywords": [
+        "sapui5",
+        "library",
+        "self-contained"
+    ],
+    "author": "hasanciftcii26@gmail.com",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@sapui5/types": "1.136.7",
+        "@ui5/cli": "^4.0.24",
+        "typescript": "^5.9.2",
+        "ui5-middleware-livereload": "^3.1.2",
+        "ui5-tooling-transpile": "^3.9.0",
+        "ui5-task-zipper": "^3.4.4",
+        "@sap/ux-ui5-tooling": "^1.19.0",
+        "@sap/ui5-builder-webide-extension": "^1.1.9"
+    }
+}

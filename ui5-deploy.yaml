@@ -9,6 +9,8 @@ framework:
   libraries:
     - name: sap.ui.core
     - name: sap.m
+    - name: sap.ui.fl
+    - name: themelib_sap_horizon
 resources:
   configuration:
     propertiesFileSourceEncoding: UTF-8
@@ -27,6 +29,7 @@ builder:
     afterTask: generateCachebusterInfo
     configuration:
       archiveName: ui5selfcontained
+      includeDependencies: true
   - name: ui5-tooling-transpile-task
     afterTask: replaceVersion
     configuration:
